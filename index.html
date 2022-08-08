@@ -10,7 +10,7 @@ h2 {text-align: center;}
   border: 1px solid green; /* Green border */
   color: white; /* White text */
   padding: 20px 40px; /* Some padding */
-  font-size: 30px;
+  font-size: 36px;
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
   
@@ -111,7 +111,77 @@ function myFunctionkisw() {
 
 
 
+function setCookie(cname,cvalue,exdays) {
+  
+  
+  var today = new Date(); 
+  var tomorrow = new Date();
+  tomorrow.setDate(today. getDate()+7);
+ 
+  let expires = "expires=" + tomorrow.toUTCString(); 
+  
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  
+  
+       
+     
+   
+        
+  
+    
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user3 = getCookie("username3");
+  if (user3 != "") {
+    alert("Welcome again Hope You enjoyed our Service ! you last visited our page on : "  + user3 + " \n \n Ni Karibu nanone Twizeye ko mwishimira Serivice zacu muheruka  gusura iyi page  kuwa :  " + user3);
+    //setCookie("username", "", 30);
+    
+    user3 = new Date() 
+     
+       setCookie("username3", user3, 30);
+    
+    
+    
+    
+  } else {
+     user3 = prompt("Please enter your name Izina ryanyu:"+new Date(),"");
+     
+      user3 = new Date() 
+     if (user3 != "" && user3 != null) {
+       setCookie("username3", user3, 30);
+     }
+  }
+}
+
+
+
+
+
+
 
 
 </script>
+
+
+
+<body onload="checkCookie()"></body>
+
+</html>
 
