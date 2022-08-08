@@ -2,16 +2,76 @@
 h1 {text-align: center;}
 p {text-align: center;}
 a {text-align: center;}
+h2 {text-align: center;}
+
+
+.btn-group button { 
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  
+  
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+  
+   
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+  
+  
+}
+
+
+
+
+
+
 </style>
 
 
 <h1 style="background-color: green;">                                     Hello ! From T-Smart solution Ltd!</h1>
-<p> <br> Welcome to the E-Somo V1 download page this is an artificial intelligence-enabled application that helps the learner 
+
+
+<h2>Button Group</h2>
+
+
+
+
+<div class="btn-group">
+
+  <button onclick="myFunction()">English </button>
+    <button onclick="myFunction()">French </button>
+    <button onclick="myFunction()">Kiswahili </button>
+    <button onclick="myFunction()">Kinyarwanda </button>
+  
+ 
+</div>
+
+
+
+
+
+<p id="p1"> <br> Welcome to the E-Somo V1 download page this is an artificial intelligence-enabled application that helps the learner 
    to smartly and learn effortlessly. <br> By using this interactive app you will get a chance of doing many national examinations by simulation,
    with direct feedback which will help the learner to quickly gain the required knowledge and skills.  <br>   <br> 
    Below are link for donloading the program,<br> 
   N.B if one link fails please try another one.<br>
-        </p>
+       </p>
 
 <p> Alternative one : <br>
 <a href="https://github.com/E-somo/versionUpdate/raw/main/electronicspost-com-solved-problems-on-rectifiers-.pdf"> First link is here !</a> <br> </p>
@@ -19,4 +79,38 @@ a {text-align: center;}
 <a href="https://www.w3schools.com">Visit W3Schools.com!</a> <br> </p>
 <p> Alternative thee : <br>
 <a href="https://www.w3schools.com">Visit W3Schools.com!</a> <br>  </p> 
-<h1 style="background-color: green;">                                   Alll the best wishes !!!!</h1>
+<h1 style="background-color: green;">                                   Alll the best wishes !!!!
+
+
+<script>
+
+function myFunction() {
+  alert("I am an alert box!");
+  document.getElementById("p1").innerHTML = " kinyarwanda";
+  
+}
+
+function myFunctionfr() {
+  alert("I am an alert box!");
+  document.getElementById("p1").innerHTML = " kinyarwanda";
+  
+}
+
+function myFunctionkisw() {
+  alert("I am an alert box!");
+  document.getElementById("p1").innerHTML = " kinyarwanda";
+  
+}
+
+function myFunctionkisw() {
+  alert("I am an alert box!");
+  document.getElementById("p1").innerHTML = " kinyarwanda";
+  
+}
+
+
+
+
+
+</script>
+
